@@ -1,0 +1,38 @@
+# Contributor: Wei LI <kuantkid@gmail.com>
+
+pkgname=python2-pyamg-svn
+pkgver=20121128
+pkgrel=855
+pkgdesc="Algebraic Multigrid Solvers in Python"
+arch=('i686' 'x86_64')
+url="https://code.google.com/p/pyamg/"
+license=('New BSD License')
+depends=('python2' 'python2-matplotlib' 'python2-nose' 'python2-numpy' 'python2-scipy')
+makedepends=('subversion')
+provides=('python2-pyamg-svn')
+conflicts=('python2-pyamg-svn')
+source=()
+md5sums=()
+
+_svnmod=python2-pyamg-svn
+_svntrunk="http://pyamg.googlecode.com/svn/trunk/"
+
+build() {
+  cd ${srcdir}
+  msg "Connecting to SVN server...."
+  if [ -d ${_svnmod}/.svn ]; then
+    (cd ${_svnmod} && svn up -r ${pkgver})
+  else
+    svn co ${_svntrunk} --config-dir ./ -r ${pkgver} ${_svnmod}
+  fi
+
+  msg "SVN checkout done or server timeout"
+  msg "Starting make..."
+
+  cd ${_svnmod}
+}
+
+package() {
+  echo "Hello World";
+
+}

@@ -1,8 +1,8 @@
 # Maintainer: Wei LI <kuantkid at gmail dot com>
 # part contents borrowed from Andrzej Giniewicz <gginiu@gmail.com>
-pkgname='scikit-learn-git'
+pkgname='python2-scikit-learn-git'
 pkgrel=1
-pkgver=20121003
+pkgver=20121126
 pkgdesc='scikit-learn is a Python module integrating classic machine learning algorithms in the tightly-knit scientific Python world.'
 arch=('i686' 'x86_64')
 url='http://scikit-learn.org'
