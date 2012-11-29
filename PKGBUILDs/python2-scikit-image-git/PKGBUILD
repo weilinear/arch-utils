@@ -1,6 +1,6 @@
 # Maintainer: Wei LI <kuantkid at gmail dot com>
 # part contents borrowed from Andrzej Giniewicz <gginiu@gmail.com>
-pkgname='scikit-image-git'
+pkgname='python2-scikit-image-git'
 pkgrel=1
 pkgver=20121003
 pkgdesc='scikit-image is a collection of algorithms for image processing in python'
